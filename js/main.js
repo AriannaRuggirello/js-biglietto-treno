@@ -10,15 +10,16 @@
 
 
 // Chiedere quanti km deve percorrere
-
-
+    let trip = parseInt(prompt("inserisci i km da percorrere"));
+    console.log("km to do " + trip)
 
 // chiedere l’età a user
-
+    let userAge = parseInt(prompt("inserisci la tua eta"));
+    console.log("user age " + userAge)
 
 
 // Calcolo km * 0,21€
-
+    
 
 
 // Se user >18 allora tot.€.biglietto -20%
