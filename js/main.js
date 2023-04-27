@@ -43,6 +43,3 @@ let ticketDiscount, total, basePrice;
     console.log(total);
     document.getElementById("my_id").innerHTML = " Sono € :" + " " + total.toFixed(2);;
   
-    
-    
-    

@@ -11,3 +11,12 @@
     text-align: center;
     line-height: 50px;
 }
+
+i{
+    text-align: center;
+}
+
+.fa-train-subway{
+    font-size: 60px;
+    padding-top: 20px;
+}
