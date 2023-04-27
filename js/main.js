@@ -7,7 +7,7 @@
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 // var globali
-
+let ticketDiscount, total, basePrice;
 
 // Chiedere quanti km deve percorrere
     let trip = parseInt(prompt("inserisci i km da percorrere"));
@@ -24,28 +24,30 @@
     console.log("train ticket costs " + ticketCost);   
 
 // Se user >18 
-    if (userAge < (18)) {
+    if (userAge < 18) {
         // allora tot.€.biglietto -20%
-        let ticketDiscount = ((ticketCost * 20 ) / 100);
-        let total = (ticketCost - ticketDiscount);
-        total = total.toFixed(2);
-        console.log(total);
+        ticketDiscount = 20;
+       
 
-        document.getElementById("my_id").innerHTML = " Sono € :" + " " + total;
 
-    } else if (userAge >= (65)); {
+    } else if (userAge >= 65) {
     // Altrimenti user >65 allora tot.€.biglietto -40%
-        let ticketDiscount = ((ticketCost * 40 ) / 100);
-        let total = (ticketCost - ticketDiscount);
-        total = total.toFixed(2);
-        console.log(total);
-
-        document.getElementById("my_id").innerHTML = " Sono € :" + " " + total;
-
-    } else {
-        document.getElementById("my_id").innerHTML = " Sono € :" + " " + ticketCost
+        ticketDiscount = 40;
+    } 
+    else {
+        ticketDiscount = 0;
     }
 
+
+
+    basePrice = ticketCost * ticketDiscount / 100;
+    total = ticketCost - basePrice;
+
+
+
+
+    console.log(total);
+    document.getElementById("my_id").innerHTML = " Sono € :" + " " + total.toFixed(2);;
     // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
     // con metodo toFixed usato sopra
     
