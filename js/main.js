@@ -27,10 +27,17 @@
     if (userAge >= (18)) {
         // allora tot.€.biglietto -20%
         let ticketDiscount = ((ticketCost * 20 ) / 100);
-        console.log(ticketCost - ticketDiscount);
+        let total = (ticketCost - ticketDiscount);
+        total = total.toFixed(2);
+        console.log(total)
 
     } else (userAge >= (65)); {
     // Altrimenti user >65 allora tot.€.biglietto -40%
         let ticketDiscount = ((ticketCost * 40 ) / 100);
-        console.log(ticketCost - ticketDiscount);
+        let total = (ticketCost - ticketDiscount);
+        total = total.toFixed(2);
+        console.log(total)
     }
+
+
+// L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
