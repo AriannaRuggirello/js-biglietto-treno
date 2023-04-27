@@ -19,20 +19,18 @@
 
 
 // Calcolo km * 0,21€
-
-let ticketRate = (0.21);
-let ticketCost = trip * ticketRate;
-console.log("train ticket costs " + ticketCost)   
-
-
+    let ticketRate = (0.21);
+    let ticketCost = trip * ticketRate;
+    console.log("train ticket costs " + ticketCost);   
 
 // Se user >18 
+    if (userAge >= (18)) {
+        // allora tot.€.biglietto -20%
+        let ticketDiscount = ((ticketCost * 20 ) / 100);
+        console.log(ticketCost - ticketDiscount);
 
-if(userAge > (18)){
-    // allora tot.€.biglietto -20%
-    console.log(ticketCost - 20)
-
-}else(userAge > (65)){
+    } else (userAge >= (65)); {
     // Altrimenti user >65 allora tot.€.biglietto -40%
-}
-
+        let ticketDiscount = ((ticketCost * 40 ) / 100);
+        console.log(ticketCost - ticketDiscount);
+    }
