@@ -28,8 +28,6 @@ let ticketDiscount, total, basePrice;
         // allora tot.€.biglietto -20%
         ticketDiscount = 20;
        
-
-
     } else if (userAge >= 65) {
     // Altrimenti user >65 allora tot.€.biglietto -40%
         ticketDiscount = 40;
@@ -38,17 +36,13 @@ let ticketDiscount, total, basePrice;
         ticketDiscount = 0;
     }
 
-
-
     basePrice = ticketCost * ticketDiscount / 100;
     total = ticketCost - basePrice;
 
-
-
-
+// L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
     console.log(total);
     document.getElementById("my_id").innerHTML = " Sono € :" + " " + total.toFixed(2);;
-    // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
-    // con metodo toFixed usato sopra
+  
+    
     
     
