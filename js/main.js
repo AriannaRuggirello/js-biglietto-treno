@@ -11,11 +11,11 @@
 
 // Chiedere quanti km deve percorrere
     let trip = parseInt(prompt("inserisci i km da percorrere"));
-    console.log("km to do " + trip)
+    console.log("km to do " + trip);
 
 // chiedere l’età a user
     let userAge = parseInt(prompt("inserisci la tua eta"));
-    console.log("user age " + userAge)
+    console.log("user age " + userAge);
 
 
 // Calcolo km * 0,21€
@@ -24,20 +24,29 @@
     console.log("train ticket costs " + ticketCost);   
 
 // Se user >18 
-    if (userAge >= (18)) {
+    if (userAge < (18)) {
         // allora tot.€.biglietto -20%
         let ticketDiscount = ((ticketCost * 20 ) / 100);
         let total = (ticketCost - ticketDiscount);
         total = total.toFixed(2);
-        console.log(total)
+        console.log(total);
 
-    } else (userAge >= (65)); {
+        document.getElementById("my_id").innerHTML = " Sono € :" + " " + total;
+
+    } else if (userAge >= (65)); {
     // Altrimenti user >65 allora tot.€.biglietto -40%
         let ticketDiscount = ((ticketCost * 40 ) / 100);
         let total = (ticketCost - ticketDiscount);
         total = total.toFixed(2);
-        console.log(total)
+        console.log(total);
+
+        document.getElementById("my_id").innerHTML = " Sono € :" + " " + total;
+
+    } else {
+        document.getElementById("my_id").innerHTML = " Sono € :" + " " + ticketCost
     }
 
-
-// L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
+    // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
+    // con metodo toFixed usato sopra
+    
+    
